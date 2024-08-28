@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main(){
+	// hello
 	int c1,c2;
 	int amount,result;
 	int c;
