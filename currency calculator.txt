@@ -1,0 +1,124 @@
+#include <stdio.h>
+
+int main(){
+	int c1,c2;
+	int amount,result;
+	int c;
+	converter:
+	printf("-------------converter---------------");
+	printf("\nn1-rupee\n2-dollar\n3-euro");
+	printf("\nenter your choise");
+	scanf("%d",&c1);
+	
+	if(c1==1)
+	{
+	 rupee:
+	 	printf("\n========Rupee Converter=========");
+		printf("\nenter your amount in rupee:-");
+		scanf("%d",&amount);
+		
+		printf("\nenter choise to convert your currency:-");
+		printf("\n1-rupee\n2-dolar-\n3-euro");
+		printf("\nenter your choise:-");
+		scanf("%d",&c2);
+		
+		if(c2==1)
+		{
+			result=amount;
+			printf("\n%d rupee=%d rupee",amount,result);
+		}
+		if(c2==2)
+		{
+			result=amount/83;
+			printf("\n%d rupee=%d dollar",amount,result);
+		}
+		if(c2==3)
+		{
+			result=amount/90;
+			printf("\n%d rupee=%d euro",amount,result);
+		}
+		printf("\n Do you want to continue with rupee converter");
+		scanf("%d",&c2);
+		if (c2==1)
+		{
+			goto rupee;
+		}
+	}
+	
+	else if(c1==2)
+	{
+		dollar:
+		printf("\=========Dollar Converter=========");
+		printf("\nenter your amount in dollar:-");
+		scanf("%d",&amount);
+		
+		printf("\nenter choise to convert your currency:-");
+		printf("\n1-rupee\n2-dolar-\n3-euro");
+		printf("\nenter your choise:-");
+		scanf("%d",&c2);
+		
+		if(c2==1)
+		{
+			result=amount*83;
+			printf("\n%d dollar=%d rupee",amount,result);
+		}
+		if(c2==2)
+		{
+			result=amount;
+			printf("\n%d dollar=%d dollar",amount,result);
+		}
+		if(c2==3)
+		{
+			result=amount*0.90;
+			printf("\n%d dollar=%d euro",amount,result);
+		}
+		printf("\n Do you want to continue with dollar converter");
+		scanf("%d",&c2);
+		if (c2==1)
+		{
+			goto dollar;
+		}
+	}
+	else if(c1==3)
+	{
+		euro:
+		printf("\n=======Euro Converter==========");
+		printf("\nenter your amount in euro:-");
+		scanf("%d",&amount);
+		
+		printf("\nenter choise to convert your currency:-");
+		printf("\n1-rupee\n2-dolar-\n3-euro");
+		printf("\nenter your choise:-");
+		scanf("%d",&c2);
+		
+		if(c2==1)
+		{
+			result=amount*90;
+			printf("\n%d euro=%d rupee",amount,result);
+		}
+		if(c2==2)
+		{
+			result=amount*1.2;
+			printf("\n%d euro=%d dollar",amount,result);
+		}
+		if(c2==3)
+		{
+			result=amount;
+			printf("\n%d euro=%d euro",amount,result);
+		}
+		printf("\n Do you want to continue with euro converter");
+		scanf("%d",&c2);
+		if (c2==1)
+		{
+			goto euro;
+		}
+	}
+	printf("Do you want to continue press 1");
+	scanf("%d",&c);
+	
+	if(c==1)
+	{
+		goto converter;
+	}
+	return 0;
+}
