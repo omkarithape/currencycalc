@@ -79,39 +79,7 @@ int main(){
 			goto dollar;
 		}
 	}
-	else if(c1==3)
-	{
-		euro:
-		printf("\n=======Euro Converter==========");
-		printf("\nenter your amount in euro:-");
-		scanf("%d",&amount);
-		
-		printf("\nenter choise to convert your currency:-");
-		printf("\n1-rupee\n2-dolar-\n3-euro");
-		printf("\nenter your choise:-");
-		scanf("%d",&c2);
-		
-		if(c2==1)
-		{
-			result=amount*90;
-			printf("\n%d euro=%d rupee",amount,result);
-		}
-		if(c2==2)
-		{
-			result=amount*1.2;
-			printf("\n%d euro=%d dollar",amount,result);
-		}
-		if(c2==3)
-		{
-			result=amount;
-			printf("\n%d euro=%d euro",amount,result);
-		}
-		printf("\n Do you want to continue with euro converter");
-		scanf("%d",&c2);
-		if (c2==1)
-		{
-			goto euro;
-		}
+	
 	}
 	printf("Do you want to continue press 1");
 	scanf("%d",&c);
